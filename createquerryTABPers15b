@@ -1,0 +1,84 @@
+
+ drop database tsbe15B;
+
+create database IF NOT EXISTS tsbe15b
+CHARACTER SET utf8
+COLLATE utf8_general_ci;
+
+use tsbe15B;
+
+CREATE TABLE `tsbe15B`.`person` (
+`ID` int(10) unsigned NOT NULL auto_increment,
+`Name` VARCHAR(50) NULL DEFAULT NULL ,
+`Vorname` VARCHAR(50) NULL DEFAULT NULL,
+`Adresse` VARCHAR(50) NULL DEFAULT NULL,
+`ort_id` VARCHAR(50) NULL DEFAULT NULL,
+`Telefon` VARCHAR(50) NULL DEFAULT NULL,
+`email` VARCHAR(50) NULL DEFAULT NULL,
+`Geburi` DATE,
+PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;
+
+CREATE TABLE `tsbe15B`.`ort` (
+`ID` int(10) unsigned NOT NULL auto_increment,
+`Plz` int(50) NULL DEFAULT NULL ,
+`PubDate` DATE,
+`name` VARCHAr(50) NULL DEFAULT NULL,
+PRIMARY KEY  (`ID`)
+) ENGINE = InnoDB;
+
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Schwarz
+Andy','null','Waldstätterstrasse
+14','3014','0798213854','andy.schwarz@bluewin.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Kammer
+Remo','null','Kupfergasse
+22','3800','0788575458','kammer_remo88@hotmail.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Vaz Achille','null','Knospenweg
+12','3250','078 608 83 15','achillevaz@gmail.com','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Waldner
+Stefan','null','Eichenweg
+23','3123','0792007397','stefan.waldner@bluewin.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Marfaing
+Vincent','null','Landoltstrasse
+28','3007','0793898391','vin.marfaing@gmail.com','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Kessler
+Sascha','null','Hirschenplatz
+6','3250','0791597080','sascha.kessler@bluewin.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Wyss Reto','null','Sägegasse
+12','4571','0796926087','reto.wyss@hotmail.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Steiner Pascal','null','alte
+Bernstrasse 6','4573','0792954140','pascal.steiner@psonline.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Saravanamuthu
+Thilieban','null','Löchliweg
+51','3048','0795108860','s.thili@hotmail.com','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Venetz
+Marco','null','Napoleonstrasse
+126','3902','0764995327','marco.venetz@gmail.com','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Yosef
+Habtermariam','null','Güterstrasse
+10','3076','0765175125','habte_2008@hotmail.com','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Michael
+Lehmann','null','Wildstrasse
+30','3097','0792394056','lehmschi@gmail.com','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Christian Gut','null','Bälliz
+60a','3600','0774381262','gut_christian@yahoo.de','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('David Wilhelm','null','Stegmatt
+10','6264','0793327996','davidwilhelm@gmx.ch','1980-11-29');
+INSERT INTO `person`(`Name`, `Vorname`, `Adresse`, `ort_id`,
+`Telefon`, `email`, `Geburi`) VALUES ('Mina
+Danial','null','Grubenstrasse
+62','3322','0792594434','mina.danial2013@gmail.com','1980-11-29');

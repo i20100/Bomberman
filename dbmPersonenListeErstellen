@@ -1,0 +1,80 @@
+
+
+
+
+create database IF NOT EXISTS tsbe15b
+CHARACTER SET utf8
+COLLATE utf8_general_ci;
+
+
+
+
+
+
+
+
+
+ CREATE TABLE IF NOT EXISTS Ort (
+  id int(10) unsigned NOT NULL auto_increment,
+  PLZ int(10) NOT NULL,
+  Name varchar(60) NOT NULL,
+  PRIMARY KEY  (`id`)
+  
+);
+
+
+
+
+CREATE TABLE IF NOT EXISTS Personen (
+  id int(10) unsigned NOT NULL auto_increment,
+  IstNochDabei boolean,
+  Name varchar(60) NOT NULL,
+  Vorname varchar(60) NOT NULL,
+  Adresse varchar(60) NOT NULL,
+  OrtID int(10) unsigned NOT NULL,
+  Telefon varchar(60) NOT NULL,
+  email varchar(60) NOT NULL,
+  Geburi date,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`OrtID`) REFERENCES Ort (id)
+  );
+
+  
+  
+INSERT INTO Ort (PLZ, Name) values ('3014', 'Bern');  
+INSERT INTO Ort (PLZ, Name) values ('3800', 'Matten b. Interlaken');
+INSERT INTO Ort (PLZ, Name) values ('3250', 'Lyss');
+INSERT INTO Ort (PLZ, Name) values ('3123', 'Belp');
+INSERT INTO Ort (PLZ, Name) values ('3007', 'Bern');
+INSERT INTO Ort (PLZ, Name) values ('4571', 'Ichertswil');
+INSERT INTO Ort (PLZ, Name) values ('4573', 'Lohn-Ammannsegg');
+INSERT INTO Ort (PLZ, Name) values ('3048', 'Worblaufen');
+INSERT INTO Ort (PLZ, Name) values ('3902', 'Gils');
+INSERT INTO Ort (PLZ, Name) values ('3076', 'Worb');
+INSERT INTO Ort (PLZ, Name) values ('3097', 'Liebefeld');
+INSERT INTO Ort (PLZ, Name) values ('3600', 'Thun');
+INSERT INTO Ort (PLZ, Name) values ('6264', 'Pfaffnau');
+INSERT INTO Ort (PLZ, Name) values ('3322', 'Schönbühl');
+
+
+="INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('"&B3&"','"&C3&"','"&D3&"','"&E3&"','"&I3&"','"&H3&"','"&J3&"','"&K3&"');"
+ 
+
+
+
+
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Schwarz','Andy','Waldstätterstrasse 1','1','0798213854','andy.schwarz@bluewin.ch','1992-06-17');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Kammer','Remo','Kupfergasse 22','2','0788575458','kammer_remo88@hotmail.ch','1988-10-24');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Vaz','Achille','Knospenweg 12','3','0786088315','achillevaz@gmail.com','1990-07-13');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Waldner','Stefan','Eichenweg 23','4','0792007397','stefan.waldner@bluewin.ch','1990-12-14');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Marfaing','Vincent','Landoltstrasse 28','5','0793898391','vin.marfaing@gmail.com','1980-11-15');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Kessler','Sascha','Hirschenplatz 6','3','0791597080','sascha.kessler@bluewin.ch','1986-05-17');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Wyss','Reto','Sägegasse 12','6','0796926087','reto.wyss@hotmail.ch','1993-03-03');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Steiner','Pascal','alte Bernstrasse 6','7','0792954140','pascal.steiner@psonline.ch','1992-01-07');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Saravanamuthu','Thilieban','Löchliweg 51','8','0795108860','s.thili@hotmail.com','1991-01-27');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Venetz','Marco','Napoleonstrasse 126','9','0764995327','marco.venetz@gmail.com','1988-04-01');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Yosef','Habtermariam','Güterstrasse 10','10','0765175125','habte_2008@hotmail.com','1988-11-21');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Lehmann','Michael','Wildstrasse 30','11','0792394056','lehmschi@gmail.com','1990-11-20');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Gut','Christian','Bälliz 60a','12','0774381262','gut_christian@yahoo.de','1991-05-26');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Wilhelm','David','Stegmatt 10','13','0793327996','davidwilhelm@gmx.ch','1986-02-05');
+INSERT INTO personen(istNochDabei, Name, Vorname, Adresse, OrtID, Telefon, email, Geburi) VALUES ('true','Danial','Mina','Grubenstrasse 62','14','0792594434','mina.danial2013@gmail.com','1988-12-11');
