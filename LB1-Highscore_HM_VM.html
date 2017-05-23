@@ -1,50 +1,93 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Dokumetation Teilsystem Highscore - Bomberman</title>
-	</head>
-	<body>
-		<h1>Dokumetation Teilsystem Highscore - Bomberman</h1>
-		<h2>Anforderungen an das Bomberman-Spiel</h2>
-		<p>Aus dem Dokument R326-01.1 Anforderungen Bomberman.docx haben wir die Anfoerungen herausgepickt welche für das Teilsystem Highscore relavant sind.
-<ul>
-	<li>19.	Wenn die zweitletzte Spielfigur gestorben ist, ist das Spiel zu Ende. Die Spieler erhalten in der Reihe ihres Ausscheidens null bis zwei Punkte, der Gewinner erhält 3 Punkte.</li>
-	<li>20.	Die Punkte der Spieler werden in einer Highscore-Liste eingetragen.</li>
-	<li>21.	Am Ende des Spiels werden der Gewinner, und die Highscore-Liste angezeigt.</li>
-	<li>22.	Die Highscore-Liste muss persistent gespeichert werden, so dass diese bei einem späteren Spiel wieder zur Verfügung steht.</li>
+<head>
+	<meta charset="utf-8">
+	<title>Dokumentation Teilsystem Highscore - Bomberman</title>
+</head>
+<body>
 
-</ul>
+	<h1>Dokumetation Teilsystem Highscore - Bomberman</h1>
+<h2>Anweisungen zur Aufgabe LB1</h2>
+	<ul>
+		Grundsätzliches:
+		<li>Gehen Sie von den Anforderungen in Dokument R326-01.1 Anforderungen Bomberman.docx und den daraus resultierenden Anwendungsfällen in Dokument R326-02.1 Anwendungsfälle Bomberman.docx aus. Diese müssen Sie auf Ihre Teilkomponente herunterbrechen.</li>
+		<li>	Identifizieren Sie in der Grobarchitektur R326-03.1 Grobarchitektur.docx die Schnittstellen, welche Ihre Teilkomponente mit anderen Teilkomponenten hat. Daraus ergeben sich zusätzliche Akteure neben den bereits bekannten.</li>
+	</ul>
 
 
-		</p>
-			<h3>LB Teil 1, Zusatzanforderungen für Teilkomponente application.highscore</h3>
-			<p>
-			Grundsätzliches
-			<ul>
-				<li>Gehen Sie von den Anforderungen in Dokument R326-01.1 Anforderungen Bomberman.docx und den daraus resultierenden Anwendungsfällen in Dokument R326-02.1 Anwendungsfälle Bomberman.docx aus. Diese müssen Sie auf Ihre Teilkomponente herunterbrechen.</li>
-				<li>	Identifizieren Sie in der Grobarchitektur R326-03.1 Grobarchitektur.docx die Schnittstellen, welche Ihre Teilkomponente mit anderen Teilkomponenten hat. Daraus ergeben sich zusätzliche Akteure neben den bereits bekannten.</li>
-			</ul>
+	<h2>Anforderungen an das Spiel Bomberman</h2>
 
-			Zusätzliche Anforderungen
-<ul>
-	<li>1.	Der BombermanServer kann bei der Highscore-Teilkomponente folgende Aktionen auslösen:</li>
-<li>Anfrage, ob ein bestimmter Spielername in der Highscore-Liste schon enthalten ist.</li>
-<li>Anlegen eines neuen Spielernamens in der Highscore-Liste.</li>
-<li>Abfragen der Punktezahl zu einem bestimmten Spielernamen.</li>
-<li>Aktualisieren der Punktezahl für einen bestimmten Spielernamen.</li>
-</ul>
-</p>
+	<p>Anforderungen aus dem Dokument R326-01.1 Anforderungen Bomberman.docx welche für das Teilsystem Highscore relavant sind.
+		<ul>
+			<li>19.	Wenn die zweitletzte Spielfigur gestorben ist, ist das Spiel zu Ende. Die Spieler erhalten in der Reihe ihres Ausscheidens null bis zwei Punkte, der Gewinner erhält 3 Punkte.</li>
+			<li>20.	Die Punkte der Spieler werden in einer Highscore-Liste eingetragen.</li>
+			<li>21.	Am Ende des Spiels werden der Gewinner, und die Highscore-Liste angezeigt.</li>
+			<li>22.	Die Highscore-Liste muss persistent gespeichert werden, so dass diese bei einem späteren Spiel wieder zur Verfügung steht.</li>
+		</ul>
+	</p>
+	<p>
 
-<h3>UML-Use-Case Diagramm Highscore</h3>
+	Zusatzanforderungen für Teilkomponente application.highscore aus dem Dokument AB326-05.4 Checkliste application.highscore.docx
+
+		<ol>
+			<li>Der BombermanServer kann bei der Highscore-Teilkomponente folgende Aktionen auslösen:</li>
+			<li>Anfrage, ob ein bestimmter Spielername in der Highscore-Liste schon enthalten ist.</li>
+			<li>Anlegen eines neuen Spielernamens in der Highscore-Liste.</li>
+			<li>Abfragen der Punktezahl zu einem bestimmten Spielernamen.</li>
+			<li>Aktualisieren der Punktezahl für einen bestimmten Spielernamen.</li>
+		</ol>
+	</p>
+
+	<h3>UML-Use-Case Diagramm Highscore</h3>
+	<img src="/images/highscoreuml.png" alt="UML Highscore">
+	<p>
+		Das Bild des UML Diagramms wurde via Umletino online erstellt, der Quellcode des
+		Bildes ist unter /images/highscoreuml.xml gespeichert falls noch Änderungen gemacht werden müssen.
+		Versucht den XML Code direkt als Bild anzuzeigen, dies geht aber nicht bzw. müsste geparsed werden mit XSLT. Parsen können wir noch nicht.
+		Bild als png eingefügt.
+	</p>
 <p>
-<img src="/images/highscoreuml.png" alt="UML Highscore">
-Das Bild des UML Diagramms wurde via Umletino online erstellt, der Quellcode des
-Bildes ist unter /images/highscoreuml.xml gespeichert falls noch Änderungen gemacht werden müssen.
-Versucht den XML Code direkt als Bild anzuzeigen, dies geht aber nicht bzw. müsst geparsed werden mit XSLT. Parsen können wir noch nicht.
-Bild als png eingefühgt.
+	<h3>Anwendungsfälle Highscore</h3>
+	<h4>Anwendungsfall Datenspeichern</h4>
+	<ol>
+		Der Server sendet nach jedem Spiel Spielenummer, alle Spielernamen mit absolvierten Punkten. Gemäss Rücksprache mit Stefan 20.05.2017.
+		<li>
+			Prüfen ob Liste/Datenbank vorhanden ist.
+			</li>
+		<li>Die erhaltenen Daten vom Serverteam speichern. Tabelle mit den Einträgen aus dem letzen Spiel ergänzen. Spielnummer, Spielernamen 4x, Punkte pro Spieler.</li>
+	</ol>
+</p>
+<p>
+	<h4>Anwendungsfall Datenanzeigen</h4>
+	<ol>
+		Nachdem der Server die Daten des letzten Spiels, die Spielernamen und die Punkte gesendet hat (siehe Anwendungsfall Datenspeichern), werden dem Server die besten Spieler aus der Highscore Liste gemeldet.
+		<li>
+			Berechnen der besten Spieler aus der Highscoreliste. Die Highscore Liste enthält alle Spieler welche je auf diesem Sever mindestens ein Spiel abgeschlossen haben. Die besten Spieler heisst, die Spieler welche mit dem selben Spielernamen bisher Spiele absolviert haben und dafür Punkte erhalten haben.
+		</li>
+		<li>
+			Senden der ersten fünf Spieler aus der berechneten Highscoreliste der besten Spieler an Server. Senden von Spielernamen, Anzahl Spiele, Anzahl Punkte.
+		</li>
+	</ol>
+</p>
+<p>
+	<h4>Alternative Abläufe</h4>
+
+	<ol>
+	Datenspeichern
+	<li>Keine Liste zum speichern vorhanden. Die Liste/Datenbank muss erstellt werden bzw. der Server muss informiert werden über diesen Umstand.</li>
+</ol>
+<ol>
+	Datenanzeigen
+	<li>Spieler meldet sich mit einem Namen an, welcher zuvor von einem anderen Spieler verwendet wurde.</li>
+</ol>
+</p>
+<p>
+<h3>Klassendiagramm</h3>
+ Hier muss noch das Klassendiagram hinein. =)
+
+
 </p>
 
-	</body>
+</body>
 
 </html>
